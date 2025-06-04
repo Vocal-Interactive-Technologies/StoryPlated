@@ -11,14 +11,7 @@ struct CookingSessionView: View {
     
     init(recipe: Recipe) {
         self.recipe = recipe
-        _viewModel = StateObject(wrappedValue: {
-            let builder = { @MainActor in
-                let viewModel = CookingSessionViewModel(recipe: recipe)
-                viewModel.startSession()
-                return viewModel
-            }
-            return builder()
-        }())
+        _viewModel = StateObject(wrappedValue: CookingSessionViewModel(recipe: recipe))
     }
     
     var body: some View {
