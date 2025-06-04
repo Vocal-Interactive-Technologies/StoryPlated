@@ -14,8 +14,12 @@ jobs:
     runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: latest-stable
+      
     - name: Build
       run: xcodebuild -scheme StoryPlated -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=latest' build
+      
     - name: Run tests
       run: xcodebuild -scheme StoryPlated -destination 'platform=iOS Simulator,name=iPhone 15 Pro,OS=latest' test
