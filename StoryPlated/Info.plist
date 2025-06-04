@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>We use speech recognition to help you navigate through cooking steps hands-free. This allows you to use voice commands like "next", "previous", "repeat", "pause", and "resume" while cooking.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>We need access to your microphone to enable voice commands during your cooking session.</string>
+</dict>
+</plist> 

@@ -11,7 +11,43 @@ import SwiftUI
 struct StoryPlatedApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                RecipeListView()
+                    .tabItem {
+                        Label("Browse", systemImage: "book.fill")
+                    }
+                
+                Text("My Recipes")
+                    .tabItem {
+                        Label("My Recipes", systemImage: "heart.fill")
+                    }
+                
+                Text("Settings")
+                    .tabItem {
+                        Label("Settings", systemImage: "gear")
+                    }
+            }
+        }
+    }
+}
+
+struct StoryPlatedApp_Previews: PreviewProvider {
+    static var previews: some View {
+        TabView {
+            RecipeListView()
+                .tabItem {
+                    Label("Browse", systemImage: "book.fill")
+                }
+            
+            Text("My Recipes")
+                .tabItem {
+                    Label("My Recipes", systemImage: "heart.fill")
+                }
+            
+            Text("Settings")
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
         }
     }
 }
